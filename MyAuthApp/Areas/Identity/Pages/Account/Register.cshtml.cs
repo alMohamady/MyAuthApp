@@ -74,18 +74,19 @@ namespace MyAuthApp.Areas.Identity.Pages.Account
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "First Name")]
+            [Display(Name ="First Name")]
             public string FirstName { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "First Name")]
+            [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
             [Required]
             [Phone]
-            [Display(Name = "Mobile")]
+            [Display(Name = "First Name")]
             public string MobileNumber { get; set; }
+
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -119,6 +120,10 @@ namespace MyAuthApp.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("/");
+            }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }

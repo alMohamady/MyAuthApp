@@ -11,16 +11,16 @@
     <hr />
     <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-6" >
             <div class="form-floating mb-3">
-                <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="First Name" />
+                <input asp-for="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="First name" />
                 <label asp-for="Input.FirstName">First Name</label>
                 <span asp-validation-for="Input.FirstName" class="text-danger"></span>
             </div>
         </div>
         <div class="col-6">
             <div class="form-floating mb-3">
-                <input asp-for="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" placeholder="Last Name" />
+                <input asp-for="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" placeholder="Last name" />
                 <label asp-for="Input.LastName">Last Name</label>
                 <span asp-validation-for="Input.LastName" class="text-danger"></span>
             </div>
@@ -28,8 +28,8 @@
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Input.MobileNumber" class="form-control" autocomplete="mobilebumber" aria-required="true" placeholder="Mobile Number" />
-        <label asp-for="Input.MobileNumber">Mobile Number</label>
+        <input asp-for="Input.MobileNumber" class="form-control" autocomplete="mobilenumber" aria-required="true" placeholder="mobile" />
+        <label asp-for="Input.MobileNumber">Mobile</label>
         <span asp-validation-for="Input.MobileNumber" class="text-danger"></span>
     </div>
 
